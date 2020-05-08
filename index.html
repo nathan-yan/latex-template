@@ -1,0 +1,206 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css'>
+<script src = 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js'></script>
+<link href = 'https://fonts.googleapis.com/icon?family=Material+Icons' rel = 'stylesheet'>
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+<style>
+    #banner-title {
+        font-family:"europa";
+    }
+
+    a {
+        -webkit-transition: all .5s ease;
+        -moz-transitition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+
+        color: rgb(10, 100, 240);
+        border-bottom-color: rgb(240, 240, 240);
+        border-bottom-style: solid;
+    }
+
+    a:hover {
+        border-bottom-color: rgb(50, 100, 240);
+    }
+
+    .eq {
+        text-align:center;
+        margin-top:20px;
+
+    }
+
+    .prettyprint {
+        font-size:12px;
+    }
+
+    .button-a{
+         transition:0.2s all ease;
+        -webkit-transition:0.2s all ease;
+        -moz-transition:all 0.2s ease;
+        -o-transition:all 0.2s ease;
+
+        background-color: rgba(0, 0, 0, 0);
+        color:white
+    }
+
+    .button-a:hover{
+        background-color: rgba(255, 255, 255, .2);
+        color:white;
+    }
+
+    .header {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #content {
+        overflow-x:hiden;
+        margin-left:10%;
+        width: 30%;
+        margin-top:50px;
+        font-family: "Georgia", "Segoe UI", "Lato";
+        font-size: 15px;
+        line-height:1.7em
+    }
+
+    @media only screen and (max-width: 600px) {
+        #content {
+            margin-left: 10%;
+            width: 80%;
+
+            font-size: 18px;
+        }
+    }
+
+</style>
+
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" /></head>
+
+<html>
+    <body style = 'overflow-x:hidden;'>
+
+        <div id = 'content' class = '' style = ''>
+            <div style = 'line-height:35px' class = 'header'>
+            Nathan Yan - Diff Eq [Section 2.4]
+            <br/>
+            P1, 3, 7, 11, 15, 23
+
+            </div>
+            <br><br>
+
+
+            <div class = 'header'>
+                P1
+            </div>
+
+            <div>
+                \(y' + y = y^2, p(x) = 1, f(x) = 1, r = 2\)
+                <br/><br/>
+                Assume right-hand side is 0.
+                <br/>
+                \(y' + y = 0 \\\Rightarrow \frac{y'}{y} = -1 \\\Rightarrow \ln{|y|} = -x + c\\y = ce^{-x}\)
+                <br/>Find a \(u\) that satisfies \(u'y(x) = f(x)(y(x))^ru^r\)<br/> \(\Rightarrow u' \cdot e^{-x} = e^{-2x} \cdot u^2 \\ \Rightarrow \frac{u'}{u^2} = e^{-x} \\ \Rightarrow \int{\frac{u'}{u^2} du} = -e^{-x} + c \\ \Rightarrow -\frac{1}{u} = -e^{-x} + c \\ \Rightarrow u = \frac{1}{e^{-x} + c}\)
+                <br/>
+                \(y = \frac{1}{e^{-x} + c} \cdot e^{-x} = \frac{1}{e^{-x}(1 + ce^{x})} \cdot e^{-x} = \boxed{\frac{1}{1 + ce^{x}}} \)
+            </div>
+
+            <br/>
+            <br/>
+
+            <div class = 'header'>
+                P3
+            </div>
+
+            <div>
+               \(x^2y' + 2y = 2e^{1/x}y^{1/2} \\ \Rightarrow y' + \frac{2}{x^2}y = \frac{2e^{1/x}}{x^2}y^{1/2}, \ p(x) = \frac{2}{x^2}, f(x) = \frac{2e^{1/x}}{x^2}, r = \frac{1}{2}\)
+               <br/>
+               Assume right-hand side is 0.
+               <br/>
+               \(\frac{y'}{y} = -\frac{2}{x^2} \\ \Rightarrow \ln{|y|} = \frac{2}{x} \\ \Rightarrow y = ue^{2 \cdot x^{-1}}\)
+                <br/>Find a \(u\) that satisfies \(u'y(x) = f(x)(y(x))^ru^r\)<br/> \(\Rightarrow u' \cdot e^{2 \cdot x^{-1}} = \frac{2e^{1/x}}{x^2} \cdot e^{x^{-1}} \cdot \sqrt{u} \\ \Rightarrow \frac{u'}{u^{1/2}} = \frac{2}{x^2} \\ \Rightarrow \int{\frac{u'}{u^{1/2}} du} = -2x^{-1} + c \\ \Rightarrow 2u^{1/2} = -2x^{-1} + c \\ \Rightarrow u = -x^{-2} + c\)
+                <br/>
+                \(y = \boxed{e^{2x^{-1}}(-x^{-2} + c)}\)
+            </div>
+
+            <br/><br/>
+
+            <div class = 'header'>
+                P7
+            </div>
+
+
+            <div>
+                \(y' - 2y = xy^3, \ p(x) = -2, f(x) = x, r = 3 \\ \Rightarrow \frac{y'}{y} = 2 \\ \Rightarrow \ln{|y|} = 2x \\ \Rightarrow y = e^{2x} \\\)
+                <br/>
+                \(u' e^{2x} = x e^{6x}u^3 \\ \Rightarrow \frac{u'}{u^3} = xe^{4x} \\ \Rightarrow -\frac{1}{2}u^{-2} = \frac{1}{16}e^{4x}(4x - 1) \\ \Rightarrow u = \sqrt{-8\frac{1}{e^{4x}(4x - 1)}} \\ \Rightarrow u = 2\sqrt{2}e^{-2x}\frac{1}{\sqrt{4x - 1}}\)
+                <br/>
+                \(y = \boxed{\frac{2\sqrt{2}}{\sqrt{4x - 1}}}\)
+
+            </div>
+            <br/><br/>
+            
+            <div class = 'header'>
+                P11
+            </div>
+
+            <div>
+                \(y' - 4y = \frac{48}{y^2}, y(0) = 1, p(x) = -4, f(x) = 48, r = -2 \\ \Rightarrow \frac{y'}{y} = 4 \\ \Rightarrow y = e^{4x}\\\)
+                <br/>
+                \(u'e^{4x} = 48e^{-8x}u^{-2} \\ \Rightarrow u'u^2 = 48e^{-12x} \\ \Rightarrow \frac{1}{3}u^3 = -4e^{-12x} + c \\ \Rightarrow u = [-12e^{-12x} + c]^{1/3}\)
+                <br/>
+                \(y = e^{4x} \cdot [-12e^{-12x} + c]^{1/3}, y(0) = 1 \\ \Rightarrow 1 = 1[-12 + c]^{1/3} \\ \Rightarrow c = 13 \\ \Rightarrow y = \boxed{e^{4x} \cdot [-12e^{-12x} + 13]^{1/3}}\)
+            </div>
+
+            <br/><br/>
+            
+            <div class = 'header'>
+                P15
+            </div>
+            
+            <div>
+                \(y' = \frac{y + x}{x} \\ \Rightarrow y' = \frac{y}{x} + 1 \\ \Rightarrow y' - \frac{y}{x} = 1, \ p(x) = -\frac{1}{x}, f(x) = 1, r = 0 \\ \Rightarrow \ln{|y|} = \ln{|x|} \\ \Rightarrow y = ux\)
+                <br/>
+                \(u'x = x^0u^0 \\ \Rightarrow u'x = 1 \\ \Rightarrow u' = 1/x \\ \Rightarrow u = \ln{|x|} + c\)
+                <br/>
+                \(y = \boxed{(\ln{|x|} + c)x}\) 
+            </div> 
+            <br/><br/>
+
+            <div class = 'header'>
+                P23
+            </div>
+
+            <div>
+                \(y' = \frac{xy + y^2}{x^2}, y(-1) = 2, \\ \Rightarrow y' = \frac{y}{x} + \frac{y^2}{x^2} \\ \Rightarrow y' - \frac{y}{x} = \frac{y^2}{x^2}, \ p(x) = -\frac{1}{x}, f(x) = \frac{1}{x^2}, r = 2\\ \Rightarrow \ln{|y|} = \ln{|x|} \\ \Rightarrow y = ux\)
+                <br/>
+                \(u'x = \frac{1}{x^2}x^2u^2 \\ \Rightarrow \frac{u'}{u^2} = \frac{1}{x} \\ \Rightarrow -u^{-1} = \ln{|x|} + c \\ \Rightarrow u = -\frac{1}{\ln{|x|} + c} \)
+                <br/>
+                \(y = -\frac{x}{\ln{|x|} + c}, y(-1) = 2 \\ \Rightarrow c = \frac{1}{2} \\ \Rightarrow y = \boxed{\frac{x}{\ln{|x|} + 0.5}}\)
+
+            </div>
+            
+            <br/><br/>
+
+           
+        <div style = 'height:50px; width:1px'></div>
+    </body>
+</html>
+
+<script>
+
+$(document).ready(function(){
+      $('.parallax').parallax();
+    });
+
+check_resize()
+
+window.addEventListener("resize", check_resize);
+</script>

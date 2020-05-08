@@ -1,0 +1,179 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css'>
+<script src = 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js'></script>
+<link href = 'https://fonts.googleapis.com/icon?family=Material+Icons' rel = 'stylesheet'>
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+<style>
+    #banner-title {
+        font-family:"europa";
+    }
+
+    a {
+        -webkit-transition: all .5s ease;
+        -moz-transitition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+
+        color: rgb(10, 100, 240);
+        border-bottom-color: rgb(240, 240, 240);
+        border-bottom-style: solid;
+    }
+
+    a:hover {
+        border-bottom-color: rgb(50, 100, 240);
+    }
+
+    .eq {
+        text-align:center;
+        margin-top:20px;
+
+    }
+
+    .prettyprint {
+        font-size:12px;
+    }
+
+    .button-a{
+         transition:0.2s all ease;
+        -webkit-transition:0.2s all ease;
+        -moz-transition:all 0.2s ease;
+        -o-transition:all 0.2s ease;
+
+        background-color: rgba(0, 0, 0, 0);
+        color:white
+    }
+
+    .button-a:hover{
+        background-color: rgba(255, 255, 255, .2);
+        color:white;
+    }
+
+    .header {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #content {
+        overflow-x:hiden;
+        margin-left:10%;
+        width: 30%;
+        margin-top:50px;
+        font-family: "Georgia", "Segoe UI", "Lato";
+        font-size: 15px;
+        line-height:1.7em
+    }
+
+    @media only screen and (max-width: 600px) {
+        #content {
+            margin-left: 10%;
+            width: 80%;
+
+            font-size: 18px;
+        }
+    }
+
+</style>
+
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" /></head>
+
+<html>
+    <body style = 'overflow-x:hidden;'>
+
+        <div id = 'content' class = '' style = ''>
+            <div style = 'line-height:35px' class = 'header'>
+            Nathan Yan - Diff Eq [Section 2.5]
+            <br/>
+            P1-21 (odd)
+
+            </div>
+            <br><br>
+
+
+            <div class = 'header'>
+                P1
+            </div>
+
+            <div>
+               \(6x^2y^2dx + 4x^3ydy = 0, M(x, y) = 6x^2y^2, N(x, y) = 4x^3y \\ \Rightarrow M_y = 12x^2y, N_x = 12x^2y\), the 
+               equation is exact.
+               <br/><br/>
+               \(G(x, y) = 2x^2y^3, \phi'(y) = 4x^3y - 6x^2y^2 \\ \Rightarrow \phi(y) = 2x^3y^2 - 2x^2y^3 \\ \Rightarrow F(x, y) = 2x^2y^3 + 2x^3y^2 - 2x^2y^3 = \boxed{2x^3y^2 = c}\)
+            </div>
+
+            <br/>
+            <br/>
+
+         
+
+            <div class = 'header'>
+                P5
+            </div>
+
+
+            <div>
+                \((x + y)^2dx + (x + y)^2dy = 0, M(x, y) = (x + y)^2, N(x, y) = (x + y)^2 \\ \Rightarrow M_y = 2x + 2y, N_x = 2y + 2x\), the equation is exact.
+                <br/><br/> 
+                \(G(x, y) = y^2x + x^2y + \frac{1}{3}x^2, \phi'(y) = x^2 + 2xy + y^2 - (2xy + x^2) \\ \Rightarrow \phi(y) = \frac{1}{3}y^3 \\ \Rightarrow F(x, y) =  \boxed{y^2x + x^2y + \frac{1}{3}x^2 + \frac{1}{3}y^3 = c}\)
+
+            </div>
+            <br/><br/>
+            
+            <div class = 'header'>
+                P9
+            </div>
+
+            <div>
+               \((3x^2 + 2xy + 4y^2)dx + (x^2 + 8xy + 18y)dy = 0, M(x, y) = (3x^2 + 2xy + 4y^2),\\ N(x, y) = (x^2 + 8xy + 18y) \\ \Rightarrow M_y = 2x + 8y, N_x = 2x + 8y\), the equation is exact.
+               <br/><br/>
+               \(G(x, y) = x^3 + yx^2 + 4y^2x, \phi'(y) = (x^2 + 8xy + 18y) - x^2 - 8yx \\ \Rightarrow \phi(y) = 9y^2 \\ \Rightarrow F(x, y) = \boxed{x^3 + yx^2 + 4y^2x + 9y^2 = c}\)
+            </div>
+
+            <br/><br/>
+            
+            <div class = 'header'>
+                P13
+            </div>
+            
+            <div>
+                \(\frac{x}{(y^2 + x^2)^{3/2}}dx + \frac{y}{(y^2 + x^2)^{3/2}}dy = 0, \\ \Rightarrow M_y = -3x(x^2 + y^2)^{-5/2}y, N_x = -3x(x ^ 2 + y^2)^{-5/2}y\), the equation is exact.
+                <br/><br/>
+                \(G(x, y) = -\frac{1}{\sqrt{x^2 + y^2}}, \phi'(y) = \frac{y}{(y^2 + x^2)^{3/2}} - \frac{y}{(x^2 + y^2)^{3/2}} = 0 \\ \Rightarrow F(x, y) = \boxed{-\frac{1}{\sqrt{x^2 + y^2}} = c}\)
+            </div> 
+            <br/><br/>
+
+            <div class = 'header'>
+                P17
+            </div>
+
+            <div>
+                \((3x^2\cos{xy} - x^3y\sin{xy} + 4x)dx + (8y - x^4\sin{xy})dy = 0 \\ \Rightarrow M_y = (3x^3 - \sin{xy}) - x^3(\sin{xy} + yx\cos{xy}), \\N_x = (3x^3 - \sin{xy}) - x^3(\sin{xy} + yx\cos{xy}\), the equation is exact.
+                <br/><br/>
+                \(G(x, y) = x^2(x \cos{xy} + 2), \phi'(y) = (8y - x^4\sin{xy}) + x^2\sin{xy} \\ \Rightarrow \phi(y) = (x^3 - x)\cos{xy} + 4y^2 \\ \Rightarrow F(x, y) = \boxed{x^2(x \cos{xy} + 2) + (x^3 - x)\cos{xy} + 4y^2 = c}\)
+
+            </div>
+            
+            <br/><br/>
+
+           
+        <div style = 'height:50px; width:1px'></div>
+    </body>
+</html>
+
+<script>
+
+$(document).ready(function(){
+      $('.parallax').parallax();
+    });
+
+check_resize()
+
+window.addEventListener("resize", check_resize);
+</script>
